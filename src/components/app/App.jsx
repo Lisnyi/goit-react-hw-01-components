@@ -1,7 +1,7 @@
-import { Profile } from "components/profile/Profile";
-import { Statistics } from "components/statistics/Statistics"
-import { FriendList } from "components/friend_list/FriendList";
-import { TransactionHistory } from "components/transaction_history/TransactionHistory";
+import { Profile } from "components/Profile/Profile";
+import { Statistics } from "components/Statistics/Statistics"
+import { FriendList } from "components/FriendList/FriendList";
+import { TransactionHistory } from "components/TransactionHistory/TransactionHistory";
 
 import user from "data/user"
 import data from "data/data"
@@ -10,13 +10,7 @@ import transactions from "data/transactions"
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -37,6 +31,6 @@ export const App = () => {
       <TransactionHistory
         items={transactions}
       />
-    </div>
+    </>
   );
 };

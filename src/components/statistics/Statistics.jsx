@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
-import { StatisticsItems } from "components/statistics/statistics_item/StatisticsItems"
+import { StatisticsItems } from "components/Statistics/StatisticsItem/StatisticsItems"
 
 export const Statistics = ({title, stats}) => {
     return (
-        <section className="statistics">
-            <h2 className="title">{title}</h2>
-            <ul className="stat-list">
+        <section>
+            <h2>{title}</h2>
+            <ul>
                 <StatisticsItems stats={stats}/>
             </ul>
         </section>
