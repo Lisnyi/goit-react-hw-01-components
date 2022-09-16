@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const FriendListItem = ({friends}) => {
     return friends.map(({id, isOnline, avatar, name}) => (
         <li key={id} className="item">
@@ -7,3 +9,7 @@ export const FriendListItem = ({friends}) => {
         </li>
     ))
   };
+
+FriendListItem.propTypes = {
+    friends: PropTypes.array
+}
