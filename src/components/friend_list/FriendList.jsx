@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { FriendListItem } from "components/friend_list/friend_list_item/FriendListItem"
 
 export const FriendList = ({friends}) => {
@@ -7,3 +8,7 @@ export const FriendList = ({friends}) => {
         </ul>
     );
   };
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.object).isRequired
+}

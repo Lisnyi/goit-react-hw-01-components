@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const TransactionItem = ({items}) => {
     return items.map(({id, type, amount, currency}) => (
         <tr key={id}>
@@ -7,3 +9,12 @@ export const TransactionItem = ({items}) => {
         </tr>
     ))
   };
+
+TransactionItem.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.string.isRequired,
+        currency: PropTypes.string.isRequired
+    }))
+}

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { StatisticsItems } from "components/statistics/statistics_item/StatisticsItems"
 
 export const Statistics = ({title, stats}) => {
@@ -10,3 +11,8 @@ export const Statistics = ({title, stats}) => {
         </section>
     );
   };
+
+Statistics.propTypes = {
+    title: PropTypes.string.isRequired,
+    stats: PropTypes.arrayOf(PropTypes.object).isRequired
+}
