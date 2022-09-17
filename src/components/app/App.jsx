@@ -1,8 +1,5 @@
-import { Profile } from "components/Profile/Profile";
-import { Statistics } from "components/Statistics/Statistics"
-import { FriendList } from "components/FriendList/FriendList";
-import { TransactionHistory } from "components/TransactionHistory/TransactionHistory";
-
+import { FriendList, Profile, Statistics, TransactionHistory } from "components";
+import { Box } from "common";
 import user from "data/user"
 import data from "data/data"
 import friends from "data/friends"
@@ -10,7 +7,7 @@ import transactions from "data/transactions"
 
 export const App = () => {
   return (
-    <>
+    <Box as='main' display='flex' alignItems='center' flexDirection='column' p={5}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -31,6 +28,6 @@ export const App = () => {
       <TransactionHistory
         items={transactions}
       />
-    </>
+    </Box>
   );
 };
