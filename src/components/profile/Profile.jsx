@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Box } from './common/Box.jsx';
+import { Box } from 'common/Box.jsx';
 import { ProfileAvatar, UserName, UserTag, UserLocation, StatsList, StatsItem } from './Profile.styled';
 
 export const Profile = ({username, tag, location, avatar, stats:{followers, views, likes}}) => {
