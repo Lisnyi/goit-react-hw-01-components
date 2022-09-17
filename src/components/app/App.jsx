@@ -1,10 +1,12 @@
-import { FriendList, Profile, TransactionHistory } from "../../components"
-import { Statistics } from "../Statistics/Statistics"
-import { Box } from "common"
 import user from "data/user"
 import data from "data/data"
 import friends from "data/friends"
 import transactions from "data/transactions"
+import { Box } from "common"
+import { Statistics } from "components/Statistics/Statistics"
+import { FriendList } from "components/FriendList/FriendList"
+import { Profile } from "components/Profile/Profile"
+import { TransactionHistory } from "components/TransactionHistory/TransactionHistory"
 
 export const App = () => {
   return (

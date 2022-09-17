@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FriendsBlockItem, Chip, FriendAvatar, FriendName } from "../../../components"
+import { FriendsBlockItem, Chip, FriendAvatar, FriendName } from './FriendListItem.styled';
 
 export const FriendListItem = ({friends}) => {
     return friends.map(({id, isOnline, avatar, name}) => (

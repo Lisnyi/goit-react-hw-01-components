@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import { StatisticsItems, StatisticsTitle, StatisticsList } from "../../components"
 import { Box } from 'common';
+import { StatisticsItems } from './StatisticsItem/StatisticsItems';
+import { StatisticsTitle, StatisticsList } from './Statistics.styled';
 
 export const Statistics = ({title, stats}) => {
     return (
