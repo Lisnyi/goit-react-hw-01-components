@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Box } from 'common';
+import { Box } from 'common/Box';
 import { StatisticsItems } from './StatisticsItem/StatisticsItems';
 import { StatisticsTitle, StatisticsList } from './Statistics.styled';
 

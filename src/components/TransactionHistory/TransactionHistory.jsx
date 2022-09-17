@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Box } from 'common';
+import { Box } from 'common/Box';
 import { TransactionItem } from './TransactionItem/TransactionItem';
 import { Table, TableHeader } from './TransactionHistory.styled';
 
