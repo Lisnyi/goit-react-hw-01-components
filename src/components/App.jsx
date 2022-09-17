@@ -2,11 +2,11 @@ import user from "data/user"
 import data from "data/data"
 import friends from "data/friends"
 import transactions from "data/transactions"
-import { Box } from "../../common/Box.jsx"
-import { Statistics } from "../../components/Statistics/Statistics.jsx"
-import { FriendList } from "../../components/FriendList/FriendList.jsx"
-import { Profile } from "../../components/Profile/Profile.jsx"
-import { TransactionHistory } from "../../components/TransactionHistory/TransactionHistory.jsx"
+import { Box } from "common/Box.jsx"
+import { Statistics } from "./Statistics/Statistics.jsx"
+import { FriendList } from "./FriendList/FriendList.jsx"
+import { TransactionHistory } from "./TransactionHistory/TransactionHistory.jsx"
+import { Profile } from "./Profile/Profile.jsx"
 
 export const App = () => {
   return (
