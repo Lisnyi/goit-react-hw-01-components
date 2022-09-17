@@ -1,5 +1,6 @@
-import { FriendList, Profile, Statistics, TransactionHistory } from "../../components";
-import { Box } from "common";
+import { FriendList, Profile, TransactionHistory } from "../../components"
+import { Statistics } from "../Statistics/Statistics"
+import { Box } from "common"
 import user from "data/user"
 import data from "data/data"
 import friends from "data/friends"
