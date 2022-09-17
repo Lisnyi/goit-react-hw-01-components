@@ -22,12 +22,13 @@ export const UserTag = styled.p`
 export const UserLocation = styled.p`
     color: ${p => p.theme.colors.secondary};
     margin: ${p => p.theme.space[0]}px;
-    margin-bottom: ${p => p.theme.space[3]}px;
+    margin-bottom: ${p => p.theme.space[4]}px;
 `
 
 export const StatsList = styled.ul`
     display: flex;
     list-style: none;
+    width: 100%;
     margin: ${p => p.theme.space[0]}px;
     padding: ${p => p.theme.space[0]}px;
 `
@@ -35,8 +36,10 @@ export const StatsList = styled.ul`
 export const StatsItem = styled.li`
     display: flex;
     flex-direction: column;
-    margin-right: ${p => p.theme.space[4]}px;
-    &:last-child {
-        margin-right: ${p => p.theme.space[0]}px;
-    }
+    align-items: center;
+    justify-content: center;
+    width: calc(100%/3);
+    min-height: 60px;
+    background-color: ${p => p.theme.colors.random};
+    border: ${p => p.theme.borders.normal};
 `

@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
+import { StatisticsItem } from "components"
+import { getRandomColor } from 'utils/randomColor';
 
 export const StatisticsItems = ({stats}) => {
     return stats.map(({id, label, percentage}) =>
-        (<li key={id}>
+        (<StatisticsItem key={id} style={{backgroundColor: getRandomColor()}}>
             <span>{label}</span>
-            <span>{percentage}</span>
-        </li>))
+            <span>{percentage}%</span>
+        </StatisticsItem>))
   };
 
 StatisticsItems.propTypes = {

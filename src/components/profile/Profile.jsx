@@ -4,31 +4,33 @@ import { ProfileAvatar, UserName, UserTag, UserLocation, StatsList, StatsItem } 
 
 export const Profile = ({username, tag, location, avatar, stats:{followers, views, likes}}) => {
     return (
-      <Box width='250px' display='flex' alignItems='center' flexDirection='column' p={4} border='normal'>
-        <Box display='flex' alignItems='center' flexDirection='column'>
-          <ProfileAvatar
-            src={avatar}
-            alt={username}
-          />
-          <UserName>{username}</UserName>
-          <UserTag>@{tag}</UserTag>
-          <UserLocation>{location}</UserLocation>
+      <Box as='section' pb={5}>
+        <Box width='250px' display='flex' alignItems='center' flexDirection='column' p={4} border='normal' mx='auto'>
+          <Box display='flex' alignItems='center' flexDirection='column'>
+            <ProfileAvatar
+              src={avatar}
+              alt={username}
+            />
+            <UserName>{username}</UserName>
+            <UserTag>@{tag}</UserTag>
+            <UserLocation>{location}</UserLocation>
+          </Box>
+          
+          <StatsList>
+            <StatsItem>
+              <span>Followers</span>
+              <span>{followers}</span>
+            </StatsItem>
+            <StatsItem>
+              <span>Views</span>
+              <span>{views}</span>
+            </StatsItem>
+            <StatsItem>
+              <span>Likes</span>
+              <span>{likes}</span>
+            </StatsItem>
+          </StatsList>
         </Box>
-        
-        <StatsList>
-          <StatsItem>
-            <span>Followers</span>
-            <span>{followers}</span>
-          </StatsItem>
-          <StatsItem>
-            <span>Views</span>
-            <span>{views}</span>
-          </StatsItem>
-          <StatsItem>
-            <span>Likes</span>
-            <span>{likes}</span>
-          </StatsItem>
-        </StatsList>
       </Box>
     );
   };

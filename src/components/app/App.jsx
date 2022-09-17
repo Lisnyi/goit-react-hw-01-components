@@ -7,7 +7,7 @@ import transactions from "data/transactions"
 
 export const App = () => {
   return (
-    <Box as='main' display='flex' alignItems='center' flexDirection='column' p={5}>
+    <Box as='main' p={5} width='100'>
       <Profile
         username={user.username}
         tag={user.tag}

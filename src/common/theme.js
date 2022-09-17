@@ -4,7 +4,7 @@ export const theme = {
         black: 'black',
         primary: '#07c',
         secondary: 'grey',
-        accent: '#609',
+        random: '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase(),
         muted: '#f6f6f6',
       },
       fontSizes: [

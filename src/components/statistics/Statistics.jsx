@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types'
-import { StatisticsItems } from "components"
+import { StatisticsItems, StatisticsTitle, StatisticsList } from "components"
+import { Box } from 'common';
 
 export const Statistics = ({title, stats}) => {
     return (
-        <section>
-            <h2>{title}</h2>
-            <ul>
-                <StatisticsItems stats={stats}/>
-            </ul>
-        </section>
+        <Box as='section' py={5} width='100%'>
+            <Box>
+                <StatisticsTitle>{title}</StatisticsTitle>
+                <StatisticsList>
+                    <StatisticsItems stats={stats}/>
+                </StatisticsList>
+            </Box>
+        </Box>
     );
   };
 
