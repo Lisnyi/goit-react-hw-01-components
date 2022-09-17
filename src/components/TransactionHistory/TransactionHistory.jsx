@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { TransactionItem, Table, TableHeader } from "components";
+import { TransactionItem, Table, TableHeader } from "../../components";
 import { Box } from 'common';
 
 export const TransactionHistory = ({items}) => {

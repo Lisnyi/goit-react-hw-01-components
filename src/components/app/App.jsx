@@ -1,4 +1,4 @@
-import { FriendList, Profile, Statistics, TransactionHistory } from "components";
+import { FriendList, Profile, Statistics, TransactionHistory } from "../../components";
 import { Box } from "common";
 import user from "data/user"
 import data from "data/data"
