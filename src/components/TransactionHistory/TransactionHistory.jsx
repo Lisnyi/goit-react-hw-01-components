@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types'
-import { TransactionItem } from "components";
+import { TransactionItem, Table, TableHeader } from "components";
+import { Box } from 'common';
 
 export const TransactionHistory = ({items}) => {
     return (
-        <table>
-            <thead>
-                <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
-                </tr>
-            </thead>
-            <tbody>
-                <TransactionItem items={items} />
-            </tbody>
-            </table>
+        <Box as='section' py={5}>
+            <Table>
+                <TableHeader>
+                    <tr>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
+                    </tr>
+                </TableHeader>
+                <tbody>
+                    <TransactionItem items={items} />
+                </tbody>
+            </Table>
+        </Box>
     );
   };
 

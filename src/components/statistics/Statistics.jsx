@@ -4,7 +4,7 @@ import { Box } from 'common';
 
 export const Statistics = ({title, stats}) => {
     return (
-        <Box as='section' py={5} width='100%'>
+        <Box as='section' py={5}>
             <Box>
                 <StatisticsTitle>{title}</StatisticsTitle>
                 <StatisticsList>

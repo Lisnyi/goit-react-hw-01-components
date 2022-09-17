@@ -2,10 +2,10 @@ export const theme = {
     colors: {
         white: 'white',
         black: 'black',
-        primary: '#07c',
+        red: 'red',
+        green: 'green',
         secondary: 'grey',
         random: '#' + (Math.random().toString(16) + '000000').substring(2,8).toUpperCase(),
-        muted: '#f6f6f6',
       },
       fontSizes: [
         12, 14, 16, 20, 24, 32

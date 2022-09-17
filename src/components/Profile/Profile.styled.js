@@ -4,6 +4,7 @@ export const ProfileAvatar = styled.img`
     width: 100px;
     border-radius: 50%;
     margin-bottom: ${p => p.theme.space[3]}px;
+    border: ${p => p.theme.borders.normal};
 `
 
 export const UserName = styled.p`
