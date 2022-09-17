@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import { Box } from 'common/Box';
-import { StatisticsItems } from './StatisticsItem/StatisticsItems';
+import { Box } from './common/Box.jsx';
+import { StatisticsItems } from './StatisticsItem/StatisticsItems.jsx';
 import { StatisticsTitle, StatisticsList } from './Statistics.styled';
 
 export const Statistics = ({title, stats}) => {
