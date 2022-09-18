@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
+import { getRandomColor } from 'utils/randomColor';
 import { Box } from '../../common/Box.jsx';
-import { StatisticsItems } from './StatisticsItem/StatisticsItems.jsx';
-import { StatisticsTitle, StatisticsList } from './Statistics.styled';
+import { StatisticsItem } from './StatisticsItem/StatisticsItem.jsx';
+import { StatisticsTitle, StatisticsList, StatsItem } from './Statistics.styled';
 
 export const Statistics = ({title, stats}) => {
     return (
@@ -9,7 +10,10 @@ export const Statistics = ({title, stats}) => {
             <Box>
                 {title && <StatisticsTitle>{title}</StatisticsTitle>}
                 <StatisticsList>
-                    <StatisticsItems stats={stats}/>
+                    {stats.map(({id, label, percentage}) =>
+                        (<StatsItem key={id} style={{backgroundColor: getRandomColor()}}>
+                            <StatisticsItem label={label} percentage={percentage}></StatisticsItem>
+                        </StatsItem>))}
                 </StatisticsList>
             </Box>
         </Box>
@@ -18,5 +22,7 @@ export const Statistics = ({title, stats}) => {
 
 Statistics.propTypes = {
     title: PropTypes.string,
-    stats: PropTypes.arrayOf(PropTypes.object).isRequired
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+    }))
 }
