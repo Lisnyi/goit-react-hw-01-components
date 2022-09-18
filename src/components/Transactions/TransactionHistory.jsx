@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Box } from '../../common/Box.jsx';
 import { TransactionItem } from './TransactionItem/TransactionItem.jsx';
-import { Table, TableHeader } from './TransactionHistory.styled';
+import { Table, TableHeader, TableItem } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({items}) => {
     return (
@@ -15,7 +15,11 @@ export const TransactionHistory = ({items}) => {
                     </tr>
                 </TableHeader>
                 <tbody>
-                    <TransactionItem items={items} />
+                    {items.map(({id, type, amount, currency}, index) => (
+                        <TableItem index={index} key={id}>
+                            <TransactionItem type={type} amount={amount} currency={currency}></TransactionItem>
+                        </TableItem>
+                    ))}
                 </tbody>
             </Table>
         </Box>
@@ -23,5 +27,7 @@ export const TransactionHistory = ({items}) => {
   };
 
   TransactionHistory.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.object).isRequired
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+    }))
   }
