@@ -7,7 +7,7 @@ export const Statistics = ({title, stats}) => {
     return (
         <Box as='section' py={5}>
             <Box>
-                <StatisticsTitle>{title}</StatisticsTitle>
+                {title && <StatisticsTitle>{title}</StatisticsTitle>}
                 <StatisticsList>
                     <StatisticsItems stats={stats}/>
                 </StatisticsList>
@@ -17,6 +17,6 @@ export const Statistics = ({title, stats}) => {
   };
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(PropTypes.object).isRequired
 }
