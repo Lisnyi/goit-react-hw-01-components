@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 
 export const Table = styled.table`
     margin: auto;
@@ -27,7 +26,3 @@ export const TableItem = styled.tr`
         padding: ${p => p.theme.space[3]}px;
     }
 `
-
-TableItem.propTypes = {
-    index: PropTypes.number.isRequired,
-}
