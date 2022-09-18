@@ -4,9 +4,9 @@ import friends from "data/friends"
 import transactions from "data/transactions"
 import { Box } from "../common/Box.jsx"
 import { Statistics } from "./Stats/Statistics.jsx"
-import { FriendList } from "./FriendList/FriendList.jsx"
-import { TransactionHistory } from "./TransactionHistory/TransactionHistory.jsx"
-import { Profile } from "./Profile/Profile.jsx"
+import { FriendList } from "./Friends/FriendList.jsx"
+import { TransactionHistory } from "./Transactions/TransactionHistory.jsx"
+import { Profile } from "./Prof/Profile.jsx"
 
 export const App = () => {
   return (
