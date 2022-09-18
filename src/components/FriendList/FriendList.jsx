@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Box } from 'common/Box.jsx';
+import { Box } from '../../common/Box.jsx';
 import { FriendListItem } from './FriendListItem/FriendListItem.jsx';
 import { FriendsBlock } from './FriendList.styled';
 
