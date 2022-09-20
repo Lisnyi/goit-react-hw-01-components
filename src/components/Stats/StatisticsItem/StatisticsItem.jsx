@@ -8,8 +8,6 @@ export const StatisticsItem = ({label, percentage}) => {
   };
 
 StatisticsItem.propTypes = {
-    stats: PropTypes.arrayOf(PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        percentage: PropTypes.number.isRequired
-    }))
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired
 }
